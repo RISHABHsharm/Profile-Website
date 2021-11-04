@@ -1,0 +1,13 @@
+<div class= screen>
+    <a class= router [style.display] = "arrow" [routerLink] ="previous">
+        <div class= arrow>&#x2039;</div>
+    </a>
+    <div class= glassContainer>
+        <div class= glass>
+            <ng-content></ng-content>
+        </div>
+    </div>
+    <a class= router [style.display] = "arrow" [routerLink]="next">
+        <div class= arrow>&#x203A;</div>
+    </a>
+</div>

@@ -1,0 +1,35 @@
+<div class= pages>
+    <app-screen next= "/about" previous= "/contact">
+        <div class= home>
+            <div class= profileImage>
+                <img src= "../../assets/website_images/developer_photo.jpeg" alt= "Profile Image"/>
+            </div>
+            <div class= profileDetail>
+                <div class= introduction>
+                    <div class= hello>Hello,</div>
+                    <div class= name>I’m RISHABH SHARMA</div>
+                    <div class= title>{{displayTitle}}</div>
+                    <div class= detail>
+                        I’m a passinate freelancer / software developer. I help people in creating 
+                        their own website and mobile apps with user friendly designs. I also help 
+                        their bussiness grow with my data science knowledge.
+                    </div>
+                </div>
+                <div class= button>
+                    <a routerLink= "/about">
+                        <app-button>
+                            <div class= text>READ MORE</div>
+                        </app-button> 
+                    </a>
+                    <a 
+                    href="https://www.upwork.com/freelancers/~01a51b1b000767186b?viewMode=1" 
+                    target= "_blank">
+                        <app-button>
+                            <div class= text>HIRE ME</div>
+                        </app-button> 
+                    </a>
+                </div>
+            </div>
+        </div>
+    </app-screen>
+</div>

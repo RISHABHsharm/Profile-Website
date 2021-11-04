@@ -1,0 +1,46 @@
+.pages{
+    width: 100%;
+    height: 78vh;
+    position: absolute;
+	overflow: auto;
+}
+
+.showButton{
+    cursor: pointer;
+}
+
+.title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-image: var(--text-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 0.5rem;
+}
+
+.content{
+    color: var(--text-default);
+}
+
+.buttonContainer{
+    margin-top: 2vh;
+    text-align: center;
+    display: var(--display);
+}
+
+.button{
+    color: var(--text-default);
+}
+
+@media (min-width: 600px) {    
+    .projectList{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .project{
+        width: 32%;
+    }
+}

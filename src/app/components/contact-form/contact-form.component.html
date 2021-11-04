@@ -1,0 +1,48 @@
+<div class= "contactForm">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()"class= displayForm>
+        <div class= inputArea>
+            <div class= "inputItem">
+                <label>Name:</label>
+                <input type="text" formControlName="name" class= "inputValue" placeholder= "Naruto">
+                <div 
+                class= "error" 
+                *ngIf="(form.controls.name.touched && form.controls.name.invalid)">
+                    <div *ngIf="form.controls.name.errors?.required">*Name is required.</div>
+                </div>
+            </div>
+            <div class= "inputItem">
+                <label>Email:</label>
+                <input type="email" formControlName="email" class= "inputValue" placeholder= "example@email.com">
+                <div 
+                class= "error" 
+                *ngIf="(form.controls.email.touched && form.controls.email.invalid)">
+                    <div *ngIf="form.controls.email.errors?.required">*Email is required.</div>
+                    <div *ngIf="form.controls.email.errors?.email">*Invalid email Id.</div>
+                </div>
+            </div>
+            <div class= "inputItem">
+                <label>Contact:</label>
+                <input type="tel" formControlName="contact" class= "inputValue" placeholder="+44-7911123456">
+                <div 
+                class= "error" 
+                *ngIf="(form.controls.contact.touched && form.controls.contact.invalid)">
+                    <div *ngIf="form.controls.contact.errors?.pattern">*Invalid mobile number.</div>
+                </div>
+            </div>
+            <div class= "inputItem">
+                <label>Message:</label>
+                <textarea rows= "5" formControlName="message" class= "inputValue" placeholder= "Hello"></textarea>
+                <div 
+                class= "error" 
+                *ngIf="(form.controls.message.touched && form.controls.message.invalid)">
+                    <div *ngIf="form.controls.message.errors?.minlength">*Please specify your requirements.</div>
+                </div>
+            </div>
+        </div>
+        <div class= buttonArea>
+            <app-button class= "button" type= "submit" [disableButton]= "!form.valid" >
+                <div class= "text">SEND</div>
+            </app-button>
+        </div>
+    </form>
+</div>

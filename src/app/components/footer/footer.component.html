@@ -1,0 +1,12 @@
+<div class= footer>
+    <div class = footerTitle>
+        <span>&lt;&lt;&lt; (Follow Me) &gt;&gt;&gt; </span>
+    </div>
+    <div class = socialMediaLogo>
+        <div  *ngFor= "let accounts of socialMedia">
+            <a [href]= "accounts.link" target= "_blank">
+                <img [src]= "accounts.img" [alt]= "accounts.alt"/>
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class= pages>
+    <app-screen next= "/contact" previous= "/portfolio">
+        <div class= skillTitle>
+            Front-End Development [(Skills / Tools Used)] 
+        </div>
+        <div class= skillLogo>
+            <div  *ngFor= "let logo of skillLogo.frontEnd" class= profileImage>
+                <img src = {{logo}} alt= "Front-End Logo"/>
+            </div>
+        </div>
+        <div class= skillTitle>
+            Back-End Development [(Skills / Tools Used)] 
+        </div>
+        <div class= skillLogo>
+            <div  *ngFor= "let logo of skillLogo.backEnd" class= profileImage>
+                <img src = {{logo}} alt= "Back-End Logo"/>
+            </div>
+        </div>
+        <div class= skillTitle>
+            Machine Learning [(Skills / Tools Used)] 
+        </div>
+        <div class= skillLogo>
+            <div  *ngFor= "let logo of skillLogo.machineLearning" class= profileImage>
+                <img src = {{logo}} alt= "Machine Learning Logo"/>
+            </div>
+        </div>
+    </app-screen>
+</div>

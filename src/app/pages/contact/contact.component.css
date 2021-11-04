@@ -1,0 +1,66 @@
+.pages{
+    width: 100%;
+    height: 78vh;
+    position: absolute;
+	overflow: auto;
+}
+
+.contactInfo div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0.25rem 0;
+}
+
+.mailLogo{
+    width: 3rem;
+    height: 3rem;
+}
+
+.mailLogo img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+}
+
+.phoneLogo{
+    width: 3rem;
+    height: 3rem;
+}
+
+.phoneLogo img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.contact{
+    padding: 0 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    background-image: var(--text-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title{
+    padding: 0 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    background-image: var(--text-primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text{
+    color: var(--text-default);
+}
+
+.mail{
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid black;
+}

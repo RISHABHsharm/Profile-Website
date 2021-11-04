@@ -1,0 +1,18 @@
+.buttonContainer{
+    height: 2.5rem;
+    width: 33vw;
+    background-color: var(--button);
+    border: 0.125rem solid var(--button-border);
+    border-radius: 1.5rem;
+    cursor: pointer;
+}
+
+@media (min-width: 600px){
+    .buttonContainer{
+        width: 15vw;
+    }
+
+    .buttonContainer:hover{
+        transform: translateY(-0.125rem);
+    }
+}

@@ -1,0 +1,28 @@
+<div class= pages>
+    <app-screen next= "/skills" previous= "/about">
+        <div class= projectList>
+            <div 
+            class= project 
+            *ngFor = "let project of portfolio"
+            [style.--display]= "project.hover ? 'block' : 'none'">
+                <app-screen arrow= "none" >
+                    <div (click)="project.hover= !project.hover" class= showButton>
+                        <div class= title>
+                            {{project.title}}
+                        </div>
+                        <div class= content>
+                            {{project.content}}  
+                        </div>
+                    </div>
+                    <div class= buttonContainer>
+                        <a [href]= "project.link" target= "_blank">
+                            <app-button>
+                                <div class= button>{{project.buttonContent}}</div>
+                            </app-button>
+                        </a>
+                    </div>
+                </app-screen>                                   
+            </div>
+        </div>
+    </app-screen>
+</div>

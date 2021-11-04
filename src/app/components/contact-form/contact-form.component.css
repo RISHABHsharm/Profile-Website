@@ -1,0 +1,45 @@
+.contactForm{
+    width: 100%;
+}
+
+.inputItem{
+    margin: 0.5rem 0;
+    color: var(--text-default);
+}
+
+.inputValue{
+    width: 95%;
+    padding: 0.25rem;
+}
+
+.button{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.error{
+    color: var(--form-error);
+    margin: 0.125rem 0;
+}
+
+.text{
+    color: var(--text-default);
+}
+
+@media (min-width: 600px) {
+    .displayForm{
+        display: flex;
+    }
+
+    .inputArea{
+        flex-grow: 4;
+    }
+
+    .buttonArea{
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

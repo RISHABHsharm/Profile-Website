@@ -1,0 +1,41 @@
+<div 
+class= modal 
+[ngClass]= "{'showModal': show, 'hideModal':!show }"
+[style.visibility]= "firstRender ? 'hidden' : ''">
+    <div class= leftSpace (click)= "toggleModal()"></div>
+    <div class= navItems>
+        <div class = "box close">
+            <div>close</div>
+            <div class= closeButton (click)= "toggleModal()">
+                <img src= "../../../assets/website_images/close_logo.jpeg" alt= "close"/>
+            </div>
+        </div>
+        <ul *ngFor = "let item of navItems">
+            <li 
+            class = "box item" 
+            [routerLink]= "item.link" 
+            (click)= "toggleModal()"
+            [ngClass]= "{'activeLink': currentRoute === item.link}">
+                {{item.name}}
+            </li>
+        </ul>
+        <div class = "box"></div>
+        <div class = "bigBox item">
+            <div>Mode</div>
+            <div class= mode>
+                <div 
+                class= modeItem 
+                (click)= "toggleTheme(0)"
+                [ngClass]= "{'activeMode': !darkMode}">
+                    <img src= "../../../assets/website_images/sun.png" alt= "sun"/>
+                </div>
+                <div 
+                class= modeItem 
+                (click)= "toggleTheme(1)"
+                [ngClass]= "{'activeMode': darkMode}">
+                    <img src= "../../../assets/website_images/moon.png" alt= "moon"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

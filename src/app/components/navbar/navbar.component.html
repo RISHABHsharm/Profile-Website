@@ -1,0 +1,29 @@
+<div class= navbar>
+	<div class= logo>
+		<div>RS</div>
+	</div>
+	<ul class= navItems *ngFor= "let item of navItems">
+		<li 
+		[routerLink]= "item.link"
+		class= navItems
+		[ngClass]= "{
+			'activeLink': item.link === currentRoute,
+			'linkHover': item.link !== currentRoute
+		}">
+			{{item.name}}
+		</li>
+	</ul>
+	<div class= mode>
+		<img 
+		[src]= "darkMode? modeImages[1].img : modeImages[0].img" 
+		alt= "mode"
+		(click)= "toggleTheme()"/>
+	</div>
+	<div class= toggleButtonContainer (click)= "toggleModal()">
+		<div class= toggleButton>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+</div>
